@@ -39,6 +39,7 @@
           let product of productList
             | filter : searchProduct
             | orderBy : sortByOrder : isDescOrder
+            | paginate : { itemsPerPage: 4, currentPage: page }
         "
       >
         <!-- Binding product data to table. -->
@@ -61,4 +62,5 @@
       </tr>
     </tbody>
   </table>
+  <pagination-controls (pageChange)="page = $event"></pagination-controls>
 </div>

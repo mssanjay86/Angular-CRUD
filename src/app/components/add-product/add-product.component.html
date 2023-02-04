@@ -2,7 +2,7 @@
 <!-- This is a parent container for form. -->
 <div class="form-container">
   <!-- ngSubmit directive to submit the form to save form data. -->
-  <form [formGroup]="addProduct" (ngSubmit)="saveProduct()">
+  <form [formGroup]="addProduct" (ngSubmit)="saveProduct()" ngNativeValidate>
     <div class="mb-3">
       <!-- To take the product name input from user. -->
       <label for="productName" class="form-label">Product name</label>
@@ -11,6 +11,7 @@
         id="productName"
         class="form-control"
         formControlName="name"
+        required="true"
       />
     </div>
     <div class="mb-3">
@@ -21,6 +22,7 @@
         formControlName="quantity"
         class="form-control"
         id="quantity"
+        required="true"
       />
     </div>
     <div class="mb-3">
@@ -31,11 +33,14 @@
         formControlName="price"
         class="form-control"
         id="price"
+        required="true"
       />
     </div>
     <!-- Submit button -->
     <button type="submit" class="btn btn-primary">Submit</button>
     <!-- Cancel button -->
-    <button type="submit" class="btn btn-danger">Cancel</button>
+    <button type="submit" (click)="navigateToList()" class="btn btn-danger">
+      Cancel
+    </button>
   </form>
 </div>

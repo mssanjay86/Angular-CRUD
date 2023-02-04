@@ -10,7 +10,12 @@ import { ProductsService } from '../../products.service';
   styleUrls: ['./add-product.component.css'],
 })
 export class AddProductComponent implements OnInit {
-  constructor(private product: ProductsService, private router: Router) {}
+  //Creating constructor to instantiate
+  constructor(
+    private product: ProductsService,
+    private router: Router,
+    private toList: Router
+  ) {}
 
   //This is inputs from the form stored as object.
   addProduct = new FormGroup({
@@ -27,5 +32,9 @@ export class AddProductComponent implements OnInit {
       //Navigating after submitting the form.
       this.router.navigate(['/products']);
     });
+  }
+  //Navigate to list after clicking cancel button.
+  navigateToList() {
+    this.toList.navigate(['/products']);
   }
 }

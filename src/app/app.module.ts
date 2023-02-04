@@ -9,6 +9,7 @@ import { ListProductsComponent } from './components/list-products/list-products.
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { OrderModule } from 'ngx-order-pipe';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { OrderModule } from 'ngx-order-pipe';
     ReactiveFormsModule,
     Ng2SearchPipeModule,
     OrderModule,
+    NgxPaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

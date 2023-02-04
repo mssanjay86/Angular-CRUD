@@ -14,6 +14,7 @@ export class ListProductsComponent implements OnInit {
   searchProduct: string = '';
   sortByOrder: string = '';
   isDescOrder: boolean = true;
+  page: number = 1;
   //Storing form data in array.
   productList: any = [];
   ngOnInit(): void {
