@@ -1,27 +1,12 @@
-# CrudApp
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.4.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#Screenshots
+![Add_product](https://user-images.githubusercontent.com/59576768/216777703-c96ed47b-a6b0-4780-a17a-e376812178bf.png)
+![Add_product_message](https://user-images.githubusercontent.com/59576768/216777738-e262ec46-fc36-4150-ad41-f6ded626d05f.png)
+![Products_list](https://user-images.githubusercontent.com/59576768/216777744-5376e1f7-7c8c-408a-ad5c-f97330fca6a3.png)
+![Edit_product](https://user-images.githubusercontent.com/59576768/216777748-2cbd77fd-e3e4-44fa-83a1-8de30d8c9660.png)
+![Product_updated_message](https://user-images.githubusercontent.com/59576768/216777758-9b876331-5a93-4b4f-bff4-d4756fe8c4e6.png)
+![Updated_quantity_product](https://user-images.githubusercontent.com/59576768/216777775-b16e5ab0-132e-499f-b238-3401ee45f38c.png)
+![Filteration](https://user-images.githubusercontent.com/59576768/216777792-57e75359-2ae2-4dc8-b6db-6c622ece8b20.png)
+![Delete_product](https://user-images.githubusercontent.com/59576768/216777801-3956f376-e280-487d-86b7-2fc0019d0e9d.png)
+![After_deletion](https://user-images.githubusercontent.com/59576768/216777819-3cdb8744-cf70-4104-87e1-137f2dc6653a.png)
+![Pagination_page_1](https://user-images.githubusercontent.com/59576768/216777838-d9ccf3b5-5ca4-497a-acac-39db3eaea349.png)
+![pagination_page_2](https://user-images.githubusercontent.com/59576768/216777848-ae6c4242-962b-47ed-9694-c5c5198599a3.png)
