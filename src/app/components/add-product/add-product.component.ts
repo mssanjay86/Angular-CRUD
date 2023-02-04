@@ -22,7 +22,7 @@ ngOnInit():void{
 saveProduct(){
 
   this.product.saveProduct(this.addProduct.value).subscribe((product)=>{
-    alert("Product add successfully.");
+    alert("Product added successfully.");
     this.router.navigate(['/products']);
 
   })
