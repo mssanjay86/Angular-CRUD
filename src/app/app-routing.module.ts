@@ -7,7 +7,7 @@ import { ListProductsComponent } from './components/list-products/list-products.
 const routes: Routes = [
   {
     //add-product component will be displayed when we navigate to /add.
-    path: 'add',
+    path: '',
     component: AddProductComponent,
   },
   {

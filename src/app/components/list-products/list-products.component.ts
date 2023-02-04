@@ -25,14 +25,16 @@ export class ListProductsComponent implements OnInit {
   }
   //Add button functionality and navigate to add product component.
   addBtn() {
-    this.router.navigate(['/add']);
+    this.router.navigate(['/']);
   }
   //Deleting the product based on id.
   deleteProduct(productId: any) {
-    this.product.deleteProduct(productId).subscribe((deletedProduct) => {
-      //Refreshing page after deleting.
-      this.ngOnInit();
-    });
+    if (confirm('Do you want to delete this product?')) {
+      this.product.deleteProduct(productId).subscribe((deletedProduct) => {
+        //Refreshing page after deleting.
+        this.ngOnInit();
+      });
+    }
   }
   //Edit functionality performed using id.
   editProduct(productId: any) {
