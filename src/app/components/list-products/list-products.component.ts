@@ -28,6 +28,6 @@ deleteProduct(productId:any){
 }
 editProduct(productId:any){
   console.log(productId);
-
+  this.router.navigate(['/edit/'+productId]);
   }
 }

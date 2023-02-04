@@ -1,0 +1,14 @@
+.form-container {
+  padding: 2% 20%;
+  margin-left: 20%;
+}
+input {
+  width: 50%;
+}
+.btn-primary {
+  display: block;
+  margin-bottom: 30px;
+}
+button {
+  width: 50%;
+}
