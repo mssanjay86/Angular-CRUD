@@ -1,7 +1,10 @@
 <h1 style="text-align: center">Add product</h1>
+<!-- This is a parent container for form. -->
 <div class="form-container">
+  <!-- ngSubmit directive to submit the form to save form data. -->
   <form [formGroup]="addProduct" (ngSubmit)="saveProduct()">
     <div class="mb-3">
+      <!-- To take the product name input from user. -->
       <label for="productName" class="form-label">Product name</label>
       <input
         type="text"
@@ -11,6 +14,7 @@
       />
     </div>
     <div class="mb-3">
+      <!-- To get the product quantity input from user. -->
       <label for="quantity" class="form-label">Product quantity</label>
       <input
         type="number"
@@ -20,6 +24,7 @@
       />
     </div>
     <div class="mb-3">
+      <!-- To take the product price input from user. -->
       <label for="price" class="form-label">Product price</label>
       <input
         type="number"
@@ -28,7 +33,9 @@
         id="price"
       />
     </div>
+    <!-- Submit button -->
     <button type="submit" class="btn btn-primary">Submit</button>
+    <!-- Cancel button -->
     <button type="submit" class="btn btn-danger">Cancel</button>
   </form>
 </div>

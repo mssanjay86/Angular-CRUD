@@ -1,30 +1,31 @@
-import { Component,OnInit } from '@angular/core';
-import {FormGroup,FormControl} from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-import {ProductsService} from '../../products.service';
+//Importing product service to use the post service.
+import { ProductsService } from '../../products.service';
 
 @Component({
   selector: 'app-add-product',
   templateUrl: './add-product.component.html',
-  styleUrls: ['./add-product.component.css']
+  styleUrls: ['./add-product.component.css'],
 })
 export class AddProductComponent implements OnInit {
+  constructor(private product: ProductsService, private router: Router) {}
 
-  constructor(private product:ProductsService,private router:Router){}
-  addProduct=new FormGroup({
-    name:new FormControl(''),
-    quantity:new FormControl(''),
-    price:new FormControl('')
-});
-ngOnInit():void{
-
-}
-saveProduct(){
-
-  this.product.saveProduct(this.addProduct.value).subscribe((product)=>{
-    alert("Product added successfully.");
-    this.router.navigate(['/products']);
-
-  })
-}
+  //This is inputs from the form stored as object.
+  addProduct = new FormGroup({
+    name: new FormControl(''),
+    quantity: new FormControl(''),
+    price: new FormControl(''),
+  });
+  ngOnInit(): void {}
+  //Method to store the newly added product.
+  saveProduct() {
+    this.product.saveProduct(this.addProduct.value).subscribe((product) => {
+      //Success message after successfully submitting the form.
+      alert('Product added successfully.');
+      //Navigating after submitting the form.
+      this.router.navigate(['/products']);
+    });
+  }
 }

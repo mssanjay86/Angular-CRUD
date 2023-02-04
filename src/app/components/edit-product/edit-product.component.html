@@ -1,7 +1,9 @@
 <h1 style="text-align: center">Edit product</h1>
 <div class="form-container">
+  <!-- ngSubmit directive to submitting the form. -->
   <form [formGroup]="editProduct" (ngSubmit)="updateProduct()">
     <div class="mb-3">
+      <!-- Updating product name. -->
       <label for="productName" class="form-label">Product name</label>
       <input
         type="text"
@@ -11,6 +13,7 @@
       />
     </div>
     <div class="mb-3">
+      <!-- Updating product quantity. -->
       <label for="quantity" class="form-label">Product quantity</label>
       <input
         type="number"
@@ -20,6 +23,7 @@
       />
     </div>
     <div class="mb-3">
+      <!-- Updating product price. -->
       <label for="price" class="form-label">Product price</label>
       <input
         type="number"
@@ -28,7 +32,9 @@
         id="price"
       />
     </div>
+    <!-- In update product component submit button is changed to update. -->
     <button type="submit" class="btn btn-primary">Update</button>
+    <!-- Cancel button -->
     <button type="submit" (click)="navigateToList()" class="btn btn-danger">
       Cancel
     </button>

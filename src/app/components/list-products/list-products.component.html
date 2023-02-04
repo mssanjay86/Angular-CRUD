@@ -1,5 +1,14 @@
 <h1 style="text-align: center">Products</h1>
 <div class="table-container">
+  <!-- Getting input to search -->
+  <input
+    class="search"
+    type="text"
+    name="search"
+    [(ngModel)]="searchProduct"
+    placeholder="Enter product to search"
+  />
+  <!-- Add button to add product to list. -->
   <button class="add-btn" (click)="addBtn()">Add</button>
   <table class="table table-striped">
     <thead>
@@ -12,17 +21,21 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let product of productList">
+      <!-- ngFor directive to iterate a list and populate that in table.  -->
+      <tr *ngFor="let product of productList | filter : searchProduct">
+        <!-- Binding product data to table. -->
         <th scope="row">{{ product.id }}</th>
         <td class="text-center">{{ product.name }}</td>
         <td class="text-center">{{ product.quantity }}kg</td>
         <td class="text-center">&#8377;{{ product.price }}</td>
         <td>
+          <!-- Edit button -->
           <button class="edit-btn" (click)="editProduct(product.id)">
             Edit
           </button>
         </td>
         <td>
+          <!-- Delete button -->
           <button class="delete-btn" (click)="deleteProduct(product.id)">
             Delete
           </button>
