@@ -1,28 +1,46 @@
 <h1 style="text-align: center">Products</h1>
 <div class="table-container">
   <!-- Getting input to search -->
+  <label style="display: block" for="search">Search</label>
   <input
+    id="search"
+    style="width: 300px"
     class="search"
     type="text"
     name="search"
     [(ngModel)]="searchProduct"
-    placeholder="Enter product to search"
+    placeholder="Enter product'name or price or quantity"
   />
   <!-- Add button to add product to list. -->
   <button class="add-btn" (click)="addBtn()">Add</button>
   <table class="table table-striped">
     <thead>
       <tr>
-        <th scope="col">S.no</th>
-        <th class="text-center" scope="col">Product name</th>
-        <th class="text-center" scope="col">Quantity(in kg)</th>
-        <th class="text-center" scope="col">Price(in INR)</th>
+        <th (click)="sort('id')" scope="col">
+          S.no<i class="fas fa-sort sort-icon-space"></i>
+        </th>
+        <th (click)="sort('name')" class="text-center" scope="col">
+          Product name<i class="fas fa-sort sort-icon-space"></i>
+        </th>
+        <th (click)="sort('quantity')" class="text-center" scope="col">
+          Quantity(in kg)<i class="fas fa-sort sort-icon-space"></i>
+        </th>
+        <th (click)="sort('price')" class="text-center" scope="col">
+          Price(in INR)<i class="fas fa-sort sort-icon-space"></i>
+        </th>
         <th class="text-center" scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
       <!-- ngFor directive to iterate a list and populate that in table.  -->
-      <tr *ngFor="let product of productList | filter : searchProduct">
+      <!-- Adding pipe to perform filter operation. -->
+      <tr
+        *ngFor="
+          let product of productList
+            | filter : searchProduct
+            | orderBy : sortByOrder : isDescOrder
+        "
+      >
         <!-- Binding product data to table. -->
         <th scope="row">{{ product.id }}</th>
         <td class="text-center">{{ product.name }}</td>

@@ -8,6 +8,7 @@ import { EditProductComponent } from './components/edit-product/edit-product.com
 import { ListProductsComponent } from './components/list-products/list-products.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { OrderModule } from 'ngx-order-pipe';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     FormsModule,
     ReactiveFormsModule,
     Ng2SearchPipeModule,
+    OrderModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

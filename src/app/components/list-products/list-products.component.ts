@@ -10,7 +10,10 @@ import { Router } from '@angular/router';
 })
 export class ListProductsComponent implements OnInit {
   constructor(private product: ProductsService, private router: Router) {}
+  //Passing empty string to achieve filteration.
   searchProduct: string = '';
+  sortByOrder: string = '';
+  isDescOrder: boolean = true;
   //Storing form data in array.
   productList: any = [];
   ngOnInit(): void {
@@ -34,5 +37,11 @@ export class ListProductsComponent implements OnInit {
   editProduct(productId: any) {
     //Navigate to update component by taking id of product.
     this.router.navigate(['/edit/' + productId]);
+  }
+
+  //Method to sort.
+  sort(productDetails: any) {
+    this.isDescOrder = !this.isDescOrder;
+    this.sortByOrder = productDetails;
   }
 }
