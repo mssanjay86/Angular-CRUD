@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.nav {
+  padding: 20px;
+  background-color: black;
+}
+.nav a {
+  color: white;
+  padding: 15px;
+}
