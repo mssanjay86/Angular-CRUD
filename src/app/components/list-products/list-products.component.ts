@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ProductsService} from '../../products.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-products',
@@ -7,7 +8,7 @@ import {ProductsService} from '../../products.service';
   styleUrls: ['./list-products.component.css']
 })
 export class ListProductsComponent implements OnInit{
-constructor(private product:ProductsService){}
+constructor(private product:ProductsService,private router: Router){}
 productList:any=[];
 ngOnInit():void{
   this.product.getAllProducts().subscribe((products)=>{
@@ -15,6 +16,10 @@ ngOnInit():void{
     this.productList=products;
   });
 
+
+}
+addBtn(){
+  this.router.navigate(['/add']);
 
 }
 }

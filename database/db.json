@@ -47,6 +47,18 @@
       "quantity": 5,
       "price": 80,
       "id": 8
+    },
+    {
+      "name": "Product 4",
+      "quantity": 2,
+      "price": 50,
+      "id": 9
+    },
+    {
+      "name": "Product 5",
+      "quantity": 6,
+      "price": 29,
+      "id": 10
     }
   ]
 }

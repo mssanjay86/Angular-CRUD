@@ -5,3 +5,13 @@
 .text-center {
   text-align: center;
 }
+
+.add-btn {
+  float: right;
+  outline: none;
+  border: 0;
+  background-color: blue;
+  color: white;
+  padding: 2px 20px;
+  border-radius: 4px;
+}
