@@ -14,7 +14,10 @@ export class ProductsService {
     return this.http.get(this.url);
    }
    saveProduct(product:any){
-    console.log(product);
+
     return this.http.post(this.url,product);
+   }
+   deleteProduct(id:any){
+    return this.http.delete(`${this.url}/${id}`);
    }
 }

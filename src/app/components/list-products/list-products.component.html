@@ -17,8 +17,16 @@
         <td class="text-center">{{ product.name }}</td>
         <td class="text-center">{{ product.quantity }}kg</td>
         <td class="text-center">&#8377;{{ product.price }}</td>
-        <td>Edit</td>
-        <td>Delete</td>
+        <td>
+          <button class="edit-btn" (click)="editProduct(product.id)">
+            Edit
+          </button>
+        </td>
+        <td>
+          <button class="delete-btn" (click)="deleteProduct(product.id)">
+            Delete
+          </button>
+        </td>
       </tr>
     </tbody>
   </table>

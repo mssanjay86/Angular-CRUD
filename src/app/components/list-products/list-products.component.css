@@ -15,3 +15,16 @@
   padding: 2px 20px;
   border-radius: 4px;
 }
+.delete-btn,
+.edit-btn {
+  border: 0;
+  outline: none;
+  color: white;
+  padding: 2px 8px;
+}
+.edit-btn {
+  background-color: green;
+}
+.delete-btn {
+  background-color: red;
+}

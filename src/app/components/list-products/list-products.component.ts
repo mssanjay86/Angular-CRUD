@@ -12,7 +12,7 @@ constructor(private product:ProductsService,private router: Router){}
 productList:any=[];
 ngOnInit():void{
   this.product.getAllProducts().subscribe((products)=>{
-    console.log(products);
+
     this.productList=products;
   });
 
@@ -20,6 +20,14 @@ ngOnInit():void{
 }
 addBtn(){
   this.router.navigate(['/add']);
-
 }
+deleteProduct(productId:any){
+  this.product.deleteProduct(productId).subscribe((deletedProduct)=>{
+    this.ngOnInit();
+  });
+}
+editProduct(productId:any){
+  console.log(productId);
+
+  }
 }
