@@ -19,4 +19,7 @@ export class ProductsService {
   getProductById(id: number) {
     return this.http.get(`${this.url}/${id} `);
   }
+  updateProduct(id: number, product: any) {
+    return this.http.put(`${this.url}/${id} `, product);
+  }
 }

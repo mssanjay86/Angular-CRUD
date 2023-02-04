@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProductsService } from '../../products.service';
 @Component({
   selector: 'app-edit-product',
@@ -10,7 +10,8 @@ import { ProductsService } from '../../products.service';
 export class EditProductComponent implements OnInit {
   constructor(
     private product: ProductsService,
-    private router: ActivatedRoute
+    private router: ActivatedRoute,
+    private toList: Router
   ) {}
   editProduct = new FormGroup({
     name: new FormControl(''),
@@ -20,7 +21,23 @@ export class EditProductComponent implements OnInit {
   ngOnInit(): void {
     this.product
       .getProductById(this.router.snapshot.params['id'])
-      .subscribe((product) => {});
+      .subscribe((product: any) => {
+        this.editProduct = new FormGroup({
+          name: new FormControl(product['name']),
+          quantity: new FormControl(product['quantity']),
+          price: new FormControl(product['price']),
+        });
+      });
   }
-  updateProduct() {}
+  updateProduct() {
+    this.product
+      .updateProduct(this.router.snapshot.params['id'], this.editProduct.value)
+      .subscribe((updatedProduct) => {
+        alert('Product updated successfully.');
+        this.toList.navigate(['/products']);
+      });
+  }
+  navigateToList() {
+    this.toList.navigate(['/products']);
+  }
 }

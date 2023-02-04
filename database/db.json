@@ -19,7 +19,7 @@
       "id": 7
     },
     {
-      "name": "Tomato",
+      "name": "Potato",
       "quantity": 5,
       "price": 80,
       "id": 8
@@ -35,12 +35,6 @@
       "quantity": 6,
       "price": 29,
       "id": 10
-    },
-    {
-      "name": "Rice",
-      "quantity": 3,
-      "price": 25,
-      "id": 11
     }
   ]
 }
